@@ -1,6 +1,7 @@
 Suoni del kit Legnetto
 
 Pack "Metronome Sounds" di Druminfected (Metronome.wav, MetronomeUp.wav)
+Il livello medio (woodblock__medio.wav) l'ha ricavato Samuele Garau da questi due.
 https://freesound.org/people/Druminfected/packs/15379/
 Licenza: Creative Commons 0 (CC0 1.0), dominio pubblico
 https://creativecommons.org/publicdomain/zero/1.0/
