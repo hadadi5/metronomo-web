@@ -1,0 +1,9 @@
+Icone dei tasti della barra in basso (mono, stereo, passa basso, passa alto)
+
+fontaudio di Michelangelo Nottoli (@fefanto)
+https://github.com/fefanto/fontaudio
+Licenza delle icone .svg: Creative Commons Attribution 4.0 (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+(il codice del progetto è MIT, vedi LICENSE; i font SIL OFL 1.1)
+
+Modifiche: ritagliate sul disegno e ricolorate.

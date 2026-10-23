@@ -1,0 +1,13 @@
+{
+  "name": "Metronomo",
+  "short_name": "Metronomo",
+  "description": "Metronomo con suddivisioni, poliritmi, pratica e playlist",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#121316",
+  "theme_color": "#121316",
+  "icons": [
+    { "src": "metronomo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

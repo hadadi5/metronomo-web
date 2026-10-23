@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#121316">
+  <title>Metronomo</title>
+  <link rel="icon" href="metronomo.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #121316; }
+    /* egui disegna tutto nel canvas, a tutta pagina. */
+    #metronomo { position: fixed; inset: 0; width: 100%; height: 100%; display: block; outline: none; }
+    #caricamento {
+      position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+      color: #8a919a; font: 15px system-ui, sans-serif; padding: 0 16px; text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="metronomo"></canvas>
+  <div id="caricamento"></div>
+  <script type="module">
+    const italiano = navigator.language.startsWith("it");
+    const avviso = document.getElementById("caricamento");
+    avviso.textContent = italiano ? "Carico il metronomo…" : "Loading the metronome…";
+    if (!window.AudioWorkletNode || !window.isSecureContext) {
+      avviso.textContent = italiano
+        ? "Questo browser non può far suonare il metronomo (serve l'AudioWorklet, su una pagina https)."
+        : "This browser can't play the metronome (it needs AudioWorklet, on an https page).";
+    } else {
+      import("./metronomo.js")
+        .then((m) => m.default())
+        .catch((e) => { avviso.textContent = (italiano ? "Il metronomo non è partito: " : "The metronome didn't start: ") + e; });
+    }
+  </script>
+</body>
+</html>

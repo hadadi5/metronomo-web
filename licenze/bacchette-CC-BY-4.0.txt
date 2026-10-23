@@ -1,0 +1,9 @@
+Suono delle bacchette del count-in
+
+"Drumsticks [Stagg Maple 5AN] №1..wav" di Theriavirra
+https://freesound.org/people/theriavirra/sounds/270146/
+Licenza: Creative Commons Attribution 4.0 (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+
+Modifiche: convertito a un canale alla frequenza del dispositivo, tolti il
+silenzio iniziale e la coda sotto i -60 dB, con una breve dissolvenza finale.
