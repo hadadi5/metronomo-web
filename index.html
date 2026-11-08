@@ -25,6 +25,8 @@
     // Come il programma: la prima lingua preferita fra italiano e inglese.
     const lingua = (navigator.languages || [navigator.language]).find((l) => /^(it|en)/i.test(l)) || "en";
     const italiano = lingua.toLowerCase().startsWith("it");
+    // Tiene da parte i file della pagina, per aprirla anche senza rete (web/sw.js).
+    if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
     const avviso = document.getElementById("caricamento");
     avviso.textContent = italiano ? "Carico il metronomo…" : "Loading the metronome…";
     if (!window.AudioWorkletNode || !window.isSecureContext) {
